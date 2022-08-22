@@ -1,0 +1,643 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+    font-family: 'Ubuntu';
+    height: 100%;
+}
+
+#root {
+    position: relative;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@font-face {
+    font-family: "Ubuntu";
+    src: local('Ubuntu'), url(../fonts/ubuntu/Ubuntu-Regular.ttf) format('truetype');
+}
+
+
+/********************************** Landing Page ******************************/
+
+/*** Header for landing ***/
+
+.landing-header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.landing-header img {
+    width: 250px;
+    margin-left: 15px;
+}
+
+.landing-header button {
+    margin-right: 15px;
+    outline: none;
+    border: none;
+    font-family: 'Open Sans Regular';
+    font-size: 22px;
+    padding: 5px 25px 5px 25px;
+    border-radius: 15px;
+    cursor: pointer;
+    color: white;
+    background-color: transparent;
+    box-shadow: 0px 1px 5px #50514f;
+    transition: all .25s;
+}
+
+.landing-header button:hover {
+    margin-bottom: 7px;
+}
+
+/*** Header for homepage ***/
+
+.homepage-header {
+    position: sticky;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0px 0px 10px 0.5px rgba(110, 110, 110, 0.2);
+}
+
+.homepage-header .lg-container {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.homepage-header .profile-info-container {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    padding: 7px;
+    cursor: pointer;
+    transition: all .2s;
+    position: relative;
+}
+
+.homepage-header .profile-info-container:hover {
+    background-color: #dbdbdb;
+    border-radius: 10px;
+}
+
+.active-state-btn {
+    background-color: #dbdbdb;
+    border-radius: 10px;
+}
+
+.homepage-header .profile-info-container h1 {
+    font-family: 'Open Sans Medium';
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.homepage-header .dropdown {
+    position: absolute;
+    box-shadow: 0px 0px 6px 0px rgba(110, 110, 110, 0.2);
+    background-color: white;
+    width: 235px;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+}
+
+.homepage-header .dropdown h1 {
+    cursor: pointer;
+    padding: 15px;
+    font-size: large;
+    font-family: 'Open Sans Medium';
+}
+
+.homepage-header .dropdown h1:hover {
+    background-color: #dbdbdb;
+}
+
+.homepage-header .dropdown #sign-out {
+    color: rgb(206, 0, 0);
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    background-color: #f4f4f4;
+    padding: 7.5px 15px 7.5px 0px;
+    border-radius: 12px;
+}
+
+.search-container input {
+    outline: none;
+    border: none;
+    background-color: #f4f4f4;
+}
+
+.search-container input::placeholder {
+    color: #999999;
+}
+
+.homepage-header .icon-container {
+    padding-right: 8px;
+    padding-left: 12px;
+    cursor: pointer;
+}
+
+
+/*** Home ***/
+
+.landing-background {
+    position: absolute;
+    z-index: -100;
+    right: 0;
+    top: 0;
+}
+
+.landing-body {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 100px 10px;
+    align-items: center;
+}
+
+.landing-body .landing-txt-btn {
+    font-family: 'Open Sans Regular';
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    margin-bottom: 14%;
+}
+
+.landing-body .landing-txt-btn .f-txt {
+    font-size: 1.7em;
+    font-family: 'Open Sans Regular';
+    font-weight: medium;
+    line-height: 1.4;
+    margin-top: 100px;
+}
+
+.landing-body .landing-txt-btn .d-acc {
+    font-style: italic;
+    position: relative;
+    width: fit-content;
+    color: #515151;
+    line-height: 1.4;
+    font-size: 1.5em;
+    font-family: 'Open Sans Medium';
+}
+
+.landing-body .landing-txt-btn .d-acc .underline {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 10px; 
+    bottom: -3px;
+    background: linear-gradient(21deg, rgba(14,150,72,1) 0%, rgba(70,183,73,1) 50%, rgba(215,224,39,1) 100%);
+}
+
+.landing-body .landing-txt-btn button, button {
+    outline: none;
+    border: none;
+    font-size: 1.7em;
+    font-family: 'Open Sans Regular';
+    background: linear-gradient(21deg, rgba(14,150,72,1) 0%, rgba(70,183,73,1) 50%, rgba(215,224,39,1) 100%);
+    padding: 5px 27px 5px 27px;
+    border-radius: 15px;
+    color: white;
+    margin-top: 27px;
+    font-weight: medium;
+    cursor: pointer;
+    box-shadow: 0px 2px 3px 0px #b3b3b3;
+    transition: all .25s;
+}
+
+.landing-body .landing-txt-btn button:hover {
+    margin-top: 24px;   
+    width: fit-content;
+}
+
+.landing-showcase {
+    position: relative;
+    margin-bottom: 30%;
+    margin-right: 12%;
+}
+
+.landing-showcase .first {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    background-color: white;
+    margin-top: 25%;
+    margin-left: 25%;
+    box-shadow: 0px 0px 10px 0.2px rgba(110, 110, 110, 0.2);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+} 
+
+.landing-showcase .second {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 0px 10px 0.2px rgba(110, 110, 110, 0.2);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+} 
+
+/*** Sign Up ***/
+
+.signup-container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signUpForm {
+    background-color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    height: fit-content;
+    width: 400px;
+    border-radius: 18px;
+    box-shadow: 2px 1px 12px 0px rgba(0,0,0,0.20);
+}
+
+#signUpTxt {
+    color: #6B6B6B;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.signUpForm .fNameCont input,
+.signUpForm .lNameCont input,
+.signUpForm .emailSCont input,
+.signUpForm .passwCont input
+ {
+    outline: 2px solid #6B6B6B;
+    font-family: 'Ubuntu';
+    height: 24px;
+    border: none;
+    border-radius: 7px;
+}   
+
+.signUpForm .fNameCont, .emailSCont, .passwCont, .lNameCont {
+    display: flex;
+    align-items:flex-end;
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    color: #6B6B6B;
+    font-size: larger;
+    font-weight: 400;
+    margin-top: 30px;
+}
+
+.signUpForm .emailSCont input {
+    margin-left: 43px;
+}
+
+.signUpForm .passwCont input {
+    margin-left: 5px;
+}
+
+.signUpForm Button {
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    font-family: 'Ubuntu';
+    font-size: 20px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-top: 30px;
+    border-radius: 8px;
+    background: linear-gradient(21deg, rgba(14,150,72,1) 0%, rgba(70,183,73,1) 50%, rgba(215,224,39,1) 100%);;
+    color: white;
+    transition: all 0.5s;
+}
+
+/*** Login ***/
+
+.login-container, .pass-change-container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container .forgot-pass {
+    margin-top: 15px;
+    color: #6B6B6B;
+    cursor: pointer;
+}
+
+.loginForm {
+    background-color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 25px 25px 25px;
+    height: fit-content;
+    width: 330px;
+    border-radius: 18px;
+    box-shadow: 2px 1px 12px 0px rgba(0,0,0,0.20);
+}
+
+#loginUpTxt {
+    color: #6B6B6B;
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.loginForm .email-cont input,
+.loginForm .pass-cont input
+{
+    outline: 2px solid #6B6B6B;
+    font-family: 'Ubuntu';
+    height: 24px;
+    border: none;
+    border-radius: 7px;
+}   
+
+.email-cont, .pass-cont {
+    display: flex;
+    position: relative;
+    align-items: flex-end;
+    width: 100%;
+    justify-content: space-between;
+    color: #6B6B6B;
+    font-size: larger;
+    font-weight: 400;
+    margin-top: 30px;
+}
+
+.loginForm Button {
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    font-family: 'Ubuntu';
+    font-size: 20px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-top: 30px;
+    border-radius: 8px;
+    background: linear-gradient(21deg, rgba(14,150,72,1) 0%, rgba(70,183,73,1) 50%, rgba(215,224,39,1) 100%);;
+    color: white;
+    transition: all 0.5s;
+}
+
+.forgot-pass-container {
+    background-color: white;
+    display: flex;
+    font-family: 'Ubuntu';
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 250px;
+    height: fit-content;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 2px 1px 12px 0px rgba(0,0,0,0.20); 
+}
+
+.forgot-pass-container div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+.forgot-pass-container label {
+    font-size: larger;
+    color: #6B6B6B;
+}
+
+.forgot-pass-container input {
+    outline: 2px solid #6B6B6B;
+    font-family: 'Ubuntu';
+    height: 24px;
+    border: none;
+    margin-top: 25px;
+    border-radius: 7px;
+}
+
+.forgot-pass-container .pass-error {
+    color: red;
+    margin-top: 13px;
+}
+
+.forgot-pass-container .pass-sent {
+    color: #3f3f3f;
+    line-height: 1.5;
+}
+
+.forgot-pass-container button {
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    font-family: 'Ubuntu';
+    font-size: 20px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-top: 25px;
+    border-radius: 8px;
+    background: linear-gradient(21deg, rgba(14,150,72,1) 0%, rgba(70,183,73,1) 50%, rgba(215,224,39,1) 100%);
+    color: white;   
+}
+
+.loader-holder {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    border: 6px solid #f3f3f3; 
+    border-top: 6px solid rgba(14,150,72,1) ; 
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg) }
+    100% { transform: rotate(360deg) }
+}
+
+.signed-up-container-holder {
+    display: flex; 
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.signed-up-container {
+    background-color: white;
+    display: flex;
+    font-family: 'Ubuntu';
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: larger;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 2px 1px 12px 0px rgba(0,0,0,0.20); 
+}
+
+
+/*** Footer ***/
+
+.footerContainer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+.footerContainer a img {
+    transition: all .25s;
+}
+
+.footerContainer a img:hover {
+    margin-bottom: 7px;
+}
+
+.footerContainer .made-by {
+    position: absolute; 
+    left: 0px; 
+    padding: 10px;
+    bottom: 0px;
+    background-color: rgb(240, 240, 240); 
+    border-top: 3px solid rgb(219, 219, 219);
+    border-right: 3px solid rgb(219, 219, 219);
+    width: fit-content; 
+    height: fit-content;
+    cursor: pointer;
+    border-top-right-radius: 5px;
+}
+
+.footerContainer .feedback {
+    position: absolute; 
+    right: 0px; 
+    bottom: 0px;
+    padding: 10px;
+    font-size: larger;
+    width: fit-content; 
+    height: fit-content;
+    background-color: rgb(240, 240, 240); 
+    border-top: 3px solid rgb(219, 219, 219);
+    border-left: 3px solid rgb(219, 219, 219);
+    border-top-left-radius: 5px;
+    cursor: pointer;
+}
+
+.feedback-holder {
+    color: rgb(46, 46, 46);
+    font-family: 'Open Sans';
+    padding: 15px;
+}
+
+.feedback-holder h1 {
+    font-size: 1.3em;
+    padding: 5px 15px 5px 15px;
+}
+
+.feedback-holder h2 {
+    font-size: 1em;
+    padding: 10px;
+}
+
+.feedback-holder textarea {
+    border: 2px solid rgb(219, 219, 219);
+    border-radius: 7px;
+    width: 87%;
+    resize: none;
+    height: 100%;
+    padding: 7px;
+    font-family: 'Open Sans';
+}
+
+.feedback-holder textarea:focus {
+    outline: 3px solid rgb(232, 232, 232);
+}

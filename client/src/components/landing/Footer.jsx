@@ -14,9 +14,6 @@ const Footer = () => {
   return (
     <>
     <div className='footerContainer'>
-      <div className='made-by' >
-        made by @Zakaria
-      </div>
         <a href="https://www.instagram.com/shareyourgoals" target='_blank' rel='noreferrer'><img style={{ width:'25px', marginRight: '12px', cursor:'pointer' }} src={instagramLg} alt="Instagram Logo" /></a> 
         <a href="https://www.facebook.com/proderto" target='_blank' rel='noreferrer'><img style={{ width:'25px', marginRight: '12px', cursor:'pointer' }} src={facebookLg} alt="Facebook Logo" /></a>
         <a href="https://www.pinterest.com/shareyourgoals" target='_blank' rel='noreferrer'><img style={{ width:'25px', marginRight: '12px', cursor:'pointer' }} src={pin} alt="Twitter Logo" /></a>

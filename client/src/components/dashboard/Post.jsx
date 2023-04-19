@@ -5,9 +5,9 @@ import like from '../../Design_Stuff/Dashboard/like.svg'
 import comment from '../../Design_Stuff/Dashboard/comment.svg'
 import award from '../../Design_Stuff/Dashboard/award.svg'
 import share from '../../Design_Stuff/Dashboard/share.svg'
-import keepUp from "../../Data/Photos/keep_up.svg"
-import outstanding from "../../Data/Photos/outstanding.svg"
-import ambitious from "../../Data/Photos/ambitious.svg"
+import keepUp from "../../Design_Stuff/Dashboard/you_have_got_this.svg"
+import outstanding from "../../Design_Stuff/Dashboard/outstanding.svg"
+import ambitious from "../../Design_Stuff/Dashboard/ambitious.svg"
 import avatarPlaceholder from '../../Design_Stuff/Profile/avatar.svg'
 import AwardModal from './AwardModal'
 import CommentModal from './CommentModal'
